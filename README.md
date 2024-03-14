@@ -4,15 +4,17 @@ This project display list of presidents with their first name, last name, and bo
 
 ## Set up
 
-To set up the script install necessary requirements:
+To set up the script install place the dataset inside datasets folder and install necessary requirements:
 
 ```bash
 pip install -r requirments.txt
 ```
 
+You can use the default csv already there: presidents.csv
+
 ## Running
 
-Run the script:
+Run the script with default parameters:
 
 ```bash
 python main.py datasets/presidents.csv
