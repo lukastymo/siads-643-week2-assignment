@@ -4,6 +4,7 @@ Preprocessing data, so they could be used by the further part of the program
 import pandas as pd
 from pandas import Series
 
+
 def preprocess_president_column(df: pd.DataFrame, president_col: str, target_first: str,
                                 target_last: str) -> pd.DataFrame:
     """
