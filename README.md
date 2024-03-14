@@ -7,10 +7,7 @@ To run the script execute:
 python main.py datasets/presidents.csv
 ```
 
-To use non-standard columns execute:
+To use non-standard columns see help:
 ```bash
-python main.py datasets/presidents.csv CustomPresident CustomBorn
+python main.py -h
 ```
-where:
-- CustomPresident is the column with president full name
-- CustomBorn is the column with date of birth
