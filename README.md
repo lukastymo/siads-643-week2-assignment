@@ -1,16 +1,16 @@
-# SIADS-643 - Week 2 Assignment - Display presidents data
+# SIADS-643 - Week 2 Assignment - Display Presidents Data
 
-This project display list of presidents with their first name, last name, and born date columns.
+This project displays a list of presidents with their first names, last names, and birth dates.
 
-## Set up
+## Setup
 
-To set up the script install place the dataset inside datasets folder and install necessary requirements:
+To set up the script, place the dataset inside the `datasets` folder and install the necessary requirements:
 
 ```bash
-pip install -r requirments.txt
+pip install -r requirements.txt
 ```
 
-You can use the default csv already there: presidents.csv
+You can use the default CSV already there: `presidents.csv`.
 
 ## Running
 
@@ -20,16 +20,22 @@ Run the script with default parameters:
 python main.py datasets/presidents.csv
 ```
 
-To use non-standard columns or customize title see help:
+To use non-standard columns or customize the title, see help:
 
 ```bash
 python main.py -h
 ```
 
-## Script functionality:
+For example:
 
-- Load a presidents file (we only support CSV file)
-- We can provide custom location for the csv
-- We can provide custom column with full name, target first name, target last name, born column
-- Lastly, the script support customization for the title for the report presented on the console
-- The successfully script will produce a report on the script with columns: First, Last and Born for presidents.
+```bash
+python main.py datasets/presidents.csv --title "My custom title"
+```
+
+## Script Functionality
+
+- Loads a presidents file (currently, only CSV files are supported).
+- Allows for a custom location for the CSV file.
+- Enables specifying custom columns for the full name, target first name, target last name, and birth date.
+- Supports customization of the title for the report presented in the console.
+- The successful execution of the script will produce a report on the console with columns: First, Last, and Born for the presidents.
