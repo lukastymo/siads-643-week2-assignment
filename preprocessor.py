@@ -1,8 +1,8 @@
 """
-Preprocessing data so they could be used by the further part of the program
+Preprocessing data, so they could be used by the further part of the program
 """
 import pandas as pd
-
+from pandas import Series
 
 def preprocess_president_column(df: pd.DataFrame, president_col: str, target_first: str,
                                 target_last: str) -> pd.DataFrame:
@@ -10,11 +10,13 @@ def preprocess_president_column(df: pd.DataFrame, president_col: str, target_fir
     Preprocess a column by splitting it into <target_first> and <target_last> names,
 
     :param df: The DataFrame with <president_col> column.
-    :param president_col: The column with full name
-    :return: DataFrame with processed 'First' and 'Last' column, but without 'President' column.
+    :param president_col: The column with the full name.
+    :param target_first: The name of the column to store the first name.
+    :param target_last: The name of the column to store the last name.
+    :return: DataFrame with processed 'First' and 'Last' column, but without <president_col> column.
     """
 
-    def split_name(row):
+    def split_name(row: Series) -> Series:
         row[target_first] = row[president_col].split(' ')[0]
         row[target_last] = row[president_col].split(' ')[-1]
         return row
