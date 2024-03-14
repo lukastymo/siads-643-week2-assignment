@@ -6,3 +6,11 @@ To run the script execute:
 ```bash
 python main.py datasets/presidents.csv
 ```
+
+To use non-standard columns execute:
+```bash
+python main.py datasets/presidents.csv CustomPresident CustomBorn
+```
+where:
+- CustomPresident is the column with president full name
+- CustomBorn is the column with date of birth
