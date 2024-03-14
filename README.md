@@ -1,3 +1,8 @@
-# SIADS-643 - week2-assignment
+# SIADS-643 - Week 2 Assignment - Presents Presidents data
 
-Assignment for SIADS-643 - Week 2 (Public)
+This project display list of presidents with their first name, last name, and born date columns.
+
+To run the script execute:
+```bash
+python main.py datasets/presidents.csv
+```
