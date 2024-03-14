@@ -1,4 +1,11 @@
-def preprocess_president_column(df, president_col, target_first, target_last):
+"""
+Preprocessing data so they could be used by the further part of the program
+"""
+import pandas as pd
+
+
+def preprocess_president_column(df: pd.DataFrame, president_col: str, target_first: str,
+                                target_last: str) -> pd.DataFrame:
     """
     Preprocess a column by splitting it into <target_first> and <target_last> names,
 
@@ -17,7 +24,7 @@ def preprocess_president_column(df, president_col, target_first, target_last):
     return df
 
 
-def preprocess_born_column(df, born_col):
+def preprocess_born_column(df: pd.DataFrame, born_col: str) -> pd.DataFrame:
     """
     Extract and clean <born_col> column.
 
@@ -29,10 +36,15 @@ def preprocess_born_column(df, born_col):
     return df
 
 
-def select_first_last_born_columns(df, target_first, target_last, born_col):
+def select_first_last_born_columns(df: pd.DataFrame, target_first: str, target_last: str,
+                                   born_col: str) -> pd.DataFrame:
     """
     Selects only first, last and born date columns
+
     :param df: Dataframe with first, last, and born
-    :return: DAtaFrame with just these three columns
+    :param target_first: target column where first name will be set
+    :param target_last: target column where last name will be set
+    :param born_col: column with date of birth
+    :return: DataFrame with just these three columns
     """
     return df[[target_first, target_last, born_col]]

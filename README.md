@@ -7,7 +7,7 @@ To run the script execute:
 python main.py datasets/presidents.csv
 ```
 
-To use non-standard columns see help:
+To use non-standard columns or customize title see help:
 ```bash
 python main.py -h
 ```
