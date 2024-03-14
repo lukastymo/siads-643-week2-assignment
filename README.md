@@ -1,4 +1,4 @@
-# SIADS-643 - Week 2 Assignment - Presents Presidents data
+# SIADS-643 - Week 2 Assignment - Display presidents data
 
 This project display list of presidents with their first name, last name, and born date columns.
 
