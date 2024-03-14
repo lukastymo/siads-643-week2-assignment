@@ -18,7 +18,7 @@ def preprocess_president_column(df: pd.DataFrame, president_col: str, target_fir
     """
 
     def split_name(row: Series) -> Series:
-        row[target_first] = row[president_col].split(' ')[0]
+        row[target_first] = row[president_col].split(' ')[0]  # We assume the name is standard with a space
         row[target_last] = row[president_col].split(' ')[-1]
         return row
 

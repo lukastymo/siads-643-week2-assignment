@@ -17,6 +17,8 @@ def get_input_parameters() -> (str, str, str, str, str, str):
     """
     parser = argparse.ArgumentParser(description="Process Presidents Data")
     parser.add_argument('file_path', type=str, help='Path to the presidents.csv file')
+
+    # Only file path is mandatory, rest of the parameters are not
     parser.add_argument('--president_column', type=str, default='President', nargs='?',
                         help='Column with president name')
     parser.add_argument('--born_column', type=str, default='Born', nargs='?',

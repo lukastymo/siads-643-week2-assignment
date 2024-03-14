@@ -11,4 +11,4 @@ def load_csv_data(file_path: str) -> pd.DataFrame:
     :param file_path: The path to the CSV file.
     :return: The loaded DataFrame.
     """
-    return pd.read_csv(file_path)
+    return pd.read_csv(file_path)  # We only support CSV right now
