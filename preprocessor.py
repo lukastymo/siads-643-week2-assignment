@@ -1,6 +1,3 @@
-import pandas as pd
-
-
 def preprocess_president_column(df, president_col, target_first, target_last):
     """
     Preprocess a column by splitting it into <target_first> and <target_last> names,
@@ -25,6 +22,7 @@ def preprocess_born_column(df, born_col):
     Extract and clean <born_col> column.
 
     :param df: The DataFrame with <born_col> column.
+    :param born_col: column with date of birth
     :return: DataFrame with processed <born_col> column.
     """
     df[born_col] = df[born_col].str.extract(r'([\w]{3} [\w]{1,2}, [\w]{4})')
@@ -38,4 +36,3 @@ def select_first_last_born_columns(df, target_first, target_last, born_col):
     :return: DAtaFrame with just these three columns
     """
     return df[[target_first, target_last, born_col]]
-
